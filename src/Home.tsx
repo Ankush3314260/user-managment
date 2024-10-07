@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TableSkeletonLoader from "./Components/TableSkeletonLoader";
 import axios from "axios";
 import "./Components/components.css";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 function App() {
   interface User {
     id: String;
@@ -17,7 +17,7 @@ function App() {
   const navigate = useNavigate();
   const [userdata, setUserdata] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<boolean>(false);
+  // const [error, setError] = useState<boolean>(false);
   const [search ,setSearch ]=useState<string>('')
   const handlnavigate = (id: String): void => {
     navigate(`/user/${id}`);
@@ -119,7 +119,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {userdata.filter((items:User,index:number)=>{
+              {userdata.filter((items:User)=>{
                  
                  return search.toLowerCase()===''?items:items.username.toLowerCase().includes(search)
                

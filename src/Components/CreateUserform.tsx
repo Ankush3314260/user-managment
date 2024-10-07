@@ -57,7 +57,7 @@ function CreateUserform() {
         newUser
       );
        let data =newUser
-      console.log(data);
+      console.log(response);
       
       alert("User Created")
       navigation("/")

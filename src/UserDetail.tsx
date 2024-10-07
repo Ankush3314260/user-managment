@@ -29,11 +29,11 @@ function UserDetail() {
     };
   }
   const { id } = useParams<{ id: string }>();
-  const [ID,setid]=useState<string>('')
+  // const [ID,setid]=useState<string>('')
   const navigate =useNavigate()
   const [userdata, setUserdata] = useState<User>();
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<boolean>(false);
+  // const [error, setError] = useState<boolean>(false);
   const fetchData = async (): Promise<void> => {
     try {
       // since we dont have more 10 person so this API will not give the response to custom that we created so we use another method
@@ -41,9 +41,7 @@ function UserDetail() {
         `https://jsonplaceholder.typicode.com/users/${id}`
       );
       setUserdata(data);
-      if (id) {
-        setid(id)
-      }
+      
     
       setLoading(false);
       console.log(data);
@@ -94,12 +92,14 @@ function UserDetail() {
           //  console.log(items);
            if (items.id==id) {
             // console.log(items);
+            
+            
          setUserdata(items)
            }  
           })
          
    
-        // console.log(newdata);
+        console.log(newdata);
         
          setLoading(false)
         }

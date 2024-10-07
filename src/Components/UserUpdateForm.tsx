@@ -31,7 +31,7 @@ const UserUpdateForm: React.FC<Props> = ({ personId }) => {
   interface User {
     id: string;
     name: string;
-    username?: string;
+    username: string;
     email: string;
     address: Address;
     phone: string;
@@ -96,7 +96,9 @@ const navigate =useNavigate()
         `https://jsonplaceholder.typicode.com/users/${personId}`,
         newUser
       );
-      console.log(newUser);
+      // console.log(newUser);
+      console.log(response);
+      
 
       
        document.querySelector(".form2")?.classList.toggle("hidden");
@@ -172,7 +174,7 @@ console.log(storedElements);
         name: data.name,
         email: data.email,
         phone: data.phone,
-        username: data.username || "",
+        username: data.username ,
         street: data.address.street,
         city: data.address.city,
         suite: data.address.suite || "",
@@ -245,10 +247,15 @@ console.log(storedElements);
             Basic Information
           </p>
           <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-10 max-sm:gap-5 mt-4">
-            <div className="p-2">
-              <span className="bg-gray-300 text-black p-2 rounded-lg">
-                User - {userdata.username}
-              </span>
+            <div className="p-2 ">
+              User-
+          <input
+                {...register("username")}
+                id="name"
+                readOnly
+                className="datainput w-full"
+                placeholder="Enter name"
+              />
             </div>
             <div className="p-2">
               <label htmlFor="name" className="block mb-1">
