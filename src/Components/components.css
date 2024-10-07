@@ -1,0 +1,135 @@
+/* loader css */
+.loaderer {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    @media (max-width:640px){
+        .loaderer{
+            width: 24px;
+            height: 24px;
+            border: 1px solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    }
+/* table skeleton css */
+
+
+.headings {
+    background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+th {
+    padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+.table{
+    background-color: white;
+    width: 80%;
+    border-radius: 13px;
+    
+}
+.loader{
+    background-color: #ededed;
+    height: 25px;
+    border-radius: 7px;
+}
+.row:not(:last-child){
+    border-bottom: 1px solid #ddd;
+    
+}
+.td{
+    padding: 10px;
+}
+td .loader{
+    background-color: #ededed;
+    background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%,rgba(255, 255, 255, 0.5) 50%, rgba(255,255,255 ,0) 60%, #ededed);
+    background-size: 200% 100%;
+    background-position-x:180% ;
+    animation: 1s loading  ease-in-out infinite;
+}
+@keyframes loading {
+    to {
+        background-position-x:-30% ;
+    }
+}
+@media (max-width:640px){
+    .headings {
+        background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 2px 8px;
+    }
+    th {
+        padding: 1em;
+      border-bottom: 2px solid #ddd;
+    }
+    .table{
+        background-color: white;
+        width: 90%;
+        border-radius: 7px;
+        border:  1px solid #ddd;
+    }
+    .loader{
+        background-color: #ededed;
+        height: 13px;
+        border-radius: 7px;
+    }
+    .row{
+        border-bottom: 1px solid #ddd;
+    }
+    .td{
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+    td .loader{
+        background-color: #ededed;
+        background-image: linear-gradient(100deg, rgba(255,255,255,0) 40%,rgba(255, 255, 255, 0.5) 50%, rgba(255,255,255 ,0) 60%, #ededed);
+        background-size: 200% 100%;
+        background-position-x:180% ;
+        animation: 1s loading  ease-in-out infinite;
+    }
+}
+
+
+/* input form css start here */
+
+.datainput{
+    outline: none;
+    background-color: transparent;
+    border-bottom-width: 2px;
+    border-color: rgb(255 255 255);
+}
+
+@media (max-width:640px){
+    .datainput{
+        outline: none;
+        background-color: transparent;
+        border-bottom-width: 1px;
+        border-color: rgb(255 255 255);
+    }
+    
+}
+/* user detail css */
+.rawtext{
+    color: #535353;
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Poppins", system-ui;
+    box-sizing: border-box;
+    background-color: #111111;
+}
+
+.row2:nth-child(even){
+background-color: #202226;
+color: aliceblue;
+}
+.row2:nth-child(odd){
+    background-color: #ededed;
+    color: black;
+    }
+.row2:last-child{
+  border-radius: 20px;
+}
+.Atable{
+    border-radius: 10px;
+    overflow: hidden;
+}
